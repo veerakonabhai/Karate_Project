@@ -31,3 +31,5 @@ Feature: karate test suite2
   Scenario: JSON test case 5
     Given def json = { "id" : "101", "tool": { "name":"Karate", "version":"0.9.4"}}
     * match json.tool == { "name":"Karate", "version":"0.9.6"}
+
+    #added to test github integration
