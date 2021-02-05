@@ -1,0 +1,7 @@
+<testsuite failures="0" name="featurefiles/callingFeature.feature" skipped="0" tests="1" time="0.931775">
+  <testcase classname="featurefiles.callingFeature" name="CallingFeature test case 1" time="0.931775">
+    <system-out>* def result = call read("calledFeature.feature") ......................... passed
+* print result ............................................................ passed
+* assert result.response.string._ == "104" ................................ passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.java.featurefiles.karate19_ActiveMQ2</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">1</div>
+            
+<div class="bg-danger" id="nav-fail">0</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2021-02-04 05:15:47 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item passed">
+<a href="#[1:34]">[1:34] Producing &amp; Consuming Message </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/featurefiles/karate19_ActiveMQ2.feature</span><span class="feature-description">JMS REST API - Test Suite 3 | interacting with JMS - ActiveMQ Server - with producing &amp; consuming message</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:34]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [1:34]</span><span class="scenario-name">Producing &amp; Consuming Message </span>
+</div>
+<div class="scenario-time passed">ms: 1585</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[1:34]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[1:34]bg">
+<div class="step-container" id="1">
+<div class="step-ref bg-step">1</div>
+<div class="step-cell passed">* def login =</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="preformatted" data-parent="1">function(uid, pwd) {
+    var temp = uid + ':' + pwd;
+    var Base64 = Java.type('java.util.Base64');
+    var encoded = Base64.getEncoder().encodeToString(temp.bytes);
+    return 'Basic ' + encoded;
+}
+17:15:46.223 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row" data-parent="[1:34]bg">
+<div class="step-container" id="2">
+<div class="step-ref bg-step">2</div>
+<div class="step-cell passed">* def waitForMiliseconds =</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="2">function(pause){ java.lang.Thread.sleep(pause) }</div>
+<div class="step-row" data-parent="[1:34]bg">
+<div class="step-container" id="3">
+<div class="step-ref bg-step">3</div>
+<div class="step-cell passed">* def auth = login("admin", "admin")</div>
+</div>
+<div class="time-cell passed">23</div>
+</div>
+<div class="step-row" data-parent="[1:34]bg">
+<div class="step-container" id="4">
+<div class="step-ref bg-step">4</div>
+<div class="step-cell passed">* print auth</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="4">17:15:46.270 [print] Basic YWRtaW46YWRtaW4=</div>
+<div class="step-row" data-parent="[1:34]bg">
+<div class="step-container" id="5">
+<div class="step-ref bg-step">5</div>
+<div class="step-cell passed">* configure ssl = false</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row" data-parent="[1:34]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-cell comment">#* configure cookies = null</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:34]bg">
+<div class="step-container" id="6">
+<div class="step-ref bg-step">6</div>
+<div class="step-cell passed">* configure followRedirects = false</div>
+</div>
+<div class="time-cell passed">31</div>
+</div>
+<div class="step-row" data-parent="[1:34]bg">
+<div class="step-container" id="7">
+<div class="step-ref bg-step">7</div>
+<div class="step-cell passed">Given url "http://192.168.1.62:8161"</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row" data-parent="[1:34]bg">
+<div class="step-container" id="8">
+<div class="step-ref bg-step">8</div>
+<div class="step-cell passed">And header Authorization = auth</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">Given path "/api/message"</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref passed">10</div>
+<div class="step-cell passed">And param destination = "queue://veera1.input"</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="11">
+<div class="step-ref passed">11</div>
+<div class="step-cell passed">And header Connection = "Keep-Alive"</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="12">
+<div class="step-ref passed">12</div>
+<div class="step-cell passed">And request "Hi, Karate - Veera"</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="13">
+<div class="step-ref passed">13</div>
+<div class="step-cell passed">When method post</div>
+</div>
+<div class="time-cell passed">395</div>
+</div>
+<div class="preformatted" data-parent="13">17:15:46.598 request:
+1 &gt; POST http://192.168.1.62:8161/api/message?destination=queue%3A%2F%2Fveera1.input
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic YWRtaW46YWRtaW4=
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 18
+1 &gt; Content-Type: text/plain; charset=UTF-8
+1 &gt; Host: 192.168.1.62:8161
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+Hi, Karate - Veera
+
+17:15:46.708 response time in milliseconds: 106.88
+1 &lt; 200
+1 &lt; Content-Length: 12
+1 &lt; Date: Thu, 04 Feb 2021 11:45:47 GMT
+1 &lt; Expires: Thu, 01 Jan 1970 00:00:00 GMT
+1 &lt; Server: Jetty(9.4.35.v20201120)
+1 &lt; Set-Cookie: JSESSIONID=node0ikkxcqtqotzw109np23pi5ke50.node0; Path=/api; HttpOnly
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-FRAME-OPTIONS: SAMEORIGIN
+1 &lt; X-XSS-Protection: 1; mode=block
+1 &lt; messageID: ID:palmeto-38209-1612437157326-4:37:1:1:1</div>
+<div class="step-row">
+<div class="step-container" id="14">
+<div class="step-ref passed">14</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-cell comment">#* assert responseTime &lt;= 3000</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="15">
+<div class="step-ref passed">15</div>
+<div class="step-cell passed">* print responseCookies</div>
+</div>
+<div class="time-cell passed">52</div>
+</div>
+<div class="preformatted" data-parent="15">17:15:46.770 [print] {
+  "JSESSIONID": {
+    "name": "JSESSIONID",
+    "value": "node0ikkxcqtqotzw109np23pi5ke50.node0",
+    "domain": "192.168.1.62",
+    "path": "/api",
+    "persistent": "false",
+    "secure": "false"
+  }
+}</div>
+<div class="step-row">
+<div class="step-container" id="16">
+<div class="step-ref passed">16</div>
+<div class="step-cell passed">* def cookieJSId = responseCookies.JSESSIONID</div>
+</div>
+<div class="time-cell passed">6</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="17">
+<div class="step-ref passed">17</div>
+<div class="step-cell passed">* print cookieJSId</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="17">17:15:46.770 [print] {
+  "name": "JSESSIONID",
+  "value": "node0ikkxcqtqotzw109np23pi5ke50.node0",
+  "domain": "192.168.1.62",
+  "path": "/api",
+  "persistent": "false",
+  "secure": "false"
+}</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-cell comment"># http://192.168.1.92:8161/api/message/orders.input?type=queue</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="18">
+<div class="step-ref passed">18</div>
+<div class="step-cell passed">* waitForMiliseconds(1000)</div>
+</div>
+<div class="time-cell passed">1021</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-cell comment"># ************************* Consuming message starts here ***************************</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="19">
+<div class="step-ref passed">19</div>
+<div class="step-cell passed">Given path "/api/message/veera1.input"</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="20">
+<div class="step-ref passed">20</div>
+<div class="step-cell passed">And param type = "queue"</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="21">
+<div class="step-ref passed">21</div>
+<div class="step-cell passed">And cookie JSESSIONID = cookieJSId</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="22">
+<div class="step-ref passed">22</div>
+<div class="step-cell passed">And header Accept-Language = "en-US,en;q=0.9"</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="23">
+<div class="step-ref passed">23</div>
+<div class="step-cell passed">And header Accept-Encoding = "gzip, deflate"</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="24">
+<div class="step-ref passed">24</div>
+<div class="step-cell passed">And header Authorization = auth</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="25">
+<div class="step-ref passed">25</div>
+<div class="step-cell passed">And header Connection = "Keep-Alive"</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="26">
+<div class="step-ref passed">26</div>
+<div class="step-cell passed">And header Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="27">
+<div class="step-ref passed">27</div>
+<div class="step-cell passed">And header Cache-Control = "max-age=0"</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="28">
+<div class="step-ref passed">28</div>
+<div class="step-cell passed">And header User-Agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="29">
+<div class="step-ref passed">29</div>
+<div class="step-cell passed">And header Upgrade-Insecure-Requests = 1</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="30">
+<div class="step-ref passed">30</div>
+<div class="step-cell passed">When method get</div>
+</div>
+<div class="time-cell passed">17</div>
+</div>
+<div class="preformatted" data-parent="30">17:15:47.817 request:
+2 &gt; GET http://192.168.1.62:8161/api/message/veera1.input?type=queue
+2 &gt; Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+2 &gt; Accept-Encoding: gzip, deflate
+2 &gt; Accept-Language: en-US,en;q=0.9
+2 &gt; Authorization: Basic YWRtaW46YWRtaW4=
+2 &gt; Cache-Control: max-age=0
+2 &gt; Connection: Keep-Alive
+2 &gt; Cookie: JSESSIONID=node0ikkxcqtqotzw109np23pi5ke50.node0
+2 &gt; Host: 192.168.1.62:8161
+2 &gt; Upgrade-Insecure-Requests: 1
+2 &gt; User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+
+17:15:47.833 response time in milliseconds: 14.30
+2 &lt; 200
+2 &lt; Cache-Control: no-cache, no-store, must-revalidate
+2 &lt; Content-Type: text/plain;charset=iso-8859-1
+2 &lt; Date: Thu, 04 Feb 2021 11:45:48 GMT
+2 &lt; Expires: Thu, 01 Jan 1970 00:00:00 GMT
+2 &lt; Pragma: no-cache
+2 &lt; Server: Jetty(9.4.35.v20201120)
+2 &lt; Transfer-Encoding: chunked
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; X-FRAME-OPTIONS: SAMEORIGIN
+2 &lt; X-XSS-Protection: 1; mode=block
+2 &lt; destination: queue://veera1.input
+2 &lt; id: ID:palmeto-38209-1612437157326-4:37:1:1:1
+Hi, Karate - Veera</div>
+<div class="step-row">
+<div class="step-container" id="31">
+<div class="step-ref passed">31</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="32">
+<div class="step-ref passed">32</div>
+<div class="step-cell passed">* print responseType</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="32">17:15:47.833 [print] string</div>
+<div class="step-row">
+<div class="step-container" id="33">
+<div class="step-ref passed">33</div>
+<div class="step-cell passed">* print response</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="33">17:15:47.833 [print] Hi, Karate - Veera</div>
+<div class="step-row">
+<div class="step-container" id="34">
+<div class="step-ref passed">34</div>
+<div class="step-cell passed">* match response contains "Hi, Karate - Veera"</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

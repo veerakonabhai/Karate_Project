@@ -1,0 +1,32 @@
+<testsuite failures="1" name="featurefiles/karate11.feature" skipped="0" tests="1" time="2.749983">
+  <testcase classname="featurefiles.karate11" name="REST API test case 1" time="2.749983">
+    <failure message="karate11.feature:19 - evaluation (js) failed: response.data.id == id, javax.script.ScriptException: TypeError: Cannot get property &quot;id&quot; of null in &lt;eval&gt; at line number 1&#10;stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)">Given url "http://dummy.restapiexample.com/api/v1/create" ................. passed
+And request {"name":"Veera","salary":"123","age":"23"} .................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* def id = response.data.id ............................................... passed
+* print id ................................................................ passed
+Given url "http://dummy.restapiexample.com/api/v1/employee/" + id ......... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert response.data.id == id ........................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate11.feature:19 - evaluation (js) failed: response.data.id == id, javax.script.ScriptException: TypeError: Cannot get property "id" of null in &lt;eval&gt; at line number 1
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)&#13;
+	at ✽.* assert response.data.id == id (karate11.feature:19)&#13;
+
+Given url "http://dummy.restapiexample.com/api/v1/update/" + id ........... skipped
+And request {"name":"Veera","salary":"123","age":"25"} .................... skipped
+When method put ........................................................... skipped
+Then status 200 ........................................................... skipped
+* print response .......................................................... skipped
+Given url "http://dummy.restapiexample.com/api/v1/delete/" + id ........... skipped
+When method delete ........................................................ skipped
+Then status 200 ........................................................... skipped
+* print response .......................................................... skipped
+* assert response.message == "successfully! deleted Records" .............. skipped</failure>
+  </testcase>
+</testsuite>

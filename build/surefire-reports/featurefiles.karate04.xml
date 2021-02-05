@@ -1,0 +1,57 @@
+<testsuite failures="0" name="featurefiles/karate04.feature" skipped="0" tests="2" time="1.171158">
+  <testcase classname="featurefiles.karate04" name="SOAP API test case 1" time="0.516333">
+    <system-out>Given url "https://www.w3schools.com/xml/tempconvert.asmx" ................ passed
+And header Content-Type = "text/xml; charset=utf-8" ....................... passed
+And request ............................................................... passed
+When soap action "https://www.w3schools.com/xml/CelsiusToFahrenheit" ...... passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* print responseHeaders["Server"] ......................................... passed
+* print responseHeaders["Server"][0] ...................................... passed
+* print responseHeaders["Server"] == ["Microsoft-IIS/7.5"] ................ passed
+* print responseHeaders["Server"][0] == "Microsoft-IIS/7.5" ............... passed
+* print responseType ...................................................... passed
+* match responseType == "xml" ............................................. passed
+* print response .......................................................... passed
+* match response contains "98.6" .......................................... passed
+* match response //CelsiusToFahrenheitResult == 98.6 ...................... passed
+* print responseTime ...................................................... passed
+* assert responseTime &lt;= 2000 ............................................. passed
+* print responseStatus .................................................... passed</system-out>
+  </testcase>
+  <testcase classname="featurefiles.karate04" name="SOAP API test case 2" time="0.654825">
+    <system-out>Given url "https://www.w3schools.com/xml/tempconvert.asmx" ................ passed
+And header Content-Type = "text/xml; charset=utf-8" ....................... passed
+And request ............................................................... passed
+When soap action "https://www.w3schools.com/xml/CelsiusToFahrenheit" ...... passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* print responseHeaders["Server"] ......................................... passed
+* print responseHeaders["Server"][0] ...................................... passed
+* print responseHeaders["Server"] == ["Microsoft-IIS/7.5"] ................ passed
+* print responseHeaders["Server"][0] == "Microsoft-IIS/7.5" ............... passed
+* print responseType ...................................................... passed
+* match responseType == "xml" ............................................. passed
+* print response .......................................................... passed
+* match response contains "98.6" .......................................... passed
+* match response //CelsiusToFahrenheitResult == 98.6 ...................... passed
+* print responseTime ...................................................... passed
+* assert responseTime &lt;= 2000 ............................................. passed
+* print responseStatus .................................................... passed
+Given url "http://www.dneonline.com/calculator.asmx" ...................... passed
+And header Content-Type = "text/xml; charset=utf-8" ....................... passed
+And request ............................................................... passed
+When soap action "http://tempuri.org/Add" ................................. passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* print responseHeaders["Server"] ......................................... passed
+* print responseHeaders["Server"][0] ...................................... passed
+* print responseHeaders["Server"] == ["Microsoft-IIS/8.0"] ................ passed
+* print responseHeaders["Server"][0] == "Microsoft-IIS/8.0" ............... passed
+* print responseType ...................................................... passed
+* print response .......................................................... passed
+* match response //AddResult == 3 ......................................... passed
+* print responseTime ...................................................... passed
+* print responseStatus .................................................... passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+group 'org.karate.training'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/com.intuit.karate/karate-junit5
+    testCompile group: 'com.intuit.karate', name: 'karate-junit5', version: '0.9.6'
+    // https://mvnrepository.com/artifact/com.intuit.karate/karate-apache
+    testCompile group: 'com.intuit.karate', name: 'karate-apache', version: '0.9.6'
+    testCompile group: 'com.microsoft.sqlserver', name: 'mssql-jdbc', version: '8.4.1.jre8'
+    testCompile "net.masterthought:cucumber-reporting:3.8.0"
+}
+
+sourceSets {
+    test {
+        resources {
+            srcDir file('src/test/java')
+            exclude '**/*.java'
+        }
+    }
+}
+
+
+test {
+    useJUnitPlatform()
+    systemProperty "karate.options", System.properties.getProperty("karate.options")
+    systemProperty "karate.env", System.properties.getProperty("karate.env")
+    outputs.upToDateWhen { false }
+}

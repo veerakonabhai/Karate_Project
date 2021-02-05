@@ -1,0 +1,10 @@
+<testsuite failures="0" name="src/test/java/featurefiles/karate20_Kafka1.feature" skipped="0" tests="1" time="0.406065">
+  <testcase classname="src.test.java.featurefiles.karate20_Kafka1" name="Negative Test Case - non-existing topic" time="0.406065">
+    <system-out>Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/topics/rest123" .............................................. passed
+When method get ........................................................... passed
+Then status 404 ........................................................... passed
+* print response .......................................................... passed
+* match response.message == "This server does not host this topic-partition." . passed</system-out>
+  </testcase>
+</testsuite>

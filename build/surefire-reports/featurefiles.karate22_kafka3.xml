@@ -1,0 +1,371 @@
+<testsuite failures="5" name="featurefiles/karate22_kafka3.feature" skipped="0" tests="8" time="25.079869">
+  <testcase classname="featurefiles.karate22_kafka3" name="Creating Consumer" time="0.017522">
+    <system-out>Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "veera_consumer" .......................... passed
+* def consumer_url = response.base_uri .................................... passed
+* print consumer_url ...................................................... passed</system-out>
+  </testcase>
+  <testcase classname="featurefiles.karate22_kafka3" name="Subscribing to topic" time="0.006509">
+    <system-out>Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "veera_consumer" .......................... passed
+* def consumer_url = response.base_uri .................................... passed
+* print consumer_url ...................................................... passed
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.v2+json" ................. passed
+When method post .......................................................... passed
+Then status 204 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="featurefiles.karate22_kafka3" name="Getting Subscription" time="0.006673">
+    <system-out>Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "veera_consumer" .......................... passed
+* def consumer_url = response.base_uri .................................... passed
+* print consumer_url ...................................................... passed
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.v2+json" ................. passed
+When method post .......................................................... passed
+Then status 204 ........................................................... passed
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert response.topics[0] == "veera_topic" .............................. passed</system-out>
+  </testcase>
+  <testcase classname="featurefiles.karate22_kafka3" name="Getting Subscription records" time="5.014745">
+    <failure message="karate22_kafka3.feature:56 - &#10;java.net.SocketTimeoutException: Read timed out">Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "veera_consumer" .......................... passed
+* def consumer_url = response.base_uri .................................... passed
+* print consumer_url ...................................................... passed
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.v2+json" ................. passed
+When method post .......................................................... passed
+Then status 204 ........................................................... passed
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert response.topics[0] == "veera_topic" .............................. passed
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/records" . passed
+And param timeout = 3000 .................................................. passed
+And param max_bytes = 300000 .............................................. passed
+And header Accept = "application/vnd.kafka.json.v2+json" .................. passed
+When method get ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22_kafka3.feature:56 - 
+java.net.SocketTimeoutException: Read timed out&#13;
+	at ✽.When method get (karate22_kafka3.feature:56)&#13;
+
+Then status 200 ........................................................... skipped
+* print response .......................................................... skipped</failure>
+  </testcase>
+  <testcase classname="featurefiles.karate22_kafka3" name="Getting assigned Assignments" time="5.017048">
+    <failure message="karate22_kafka3.feature:64 - &#10;java.net.SocketTimeoutException: Read timed out">Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "veera_consumer" .......................... passed
+* def consumer_url = response.base_uri .................................... passed
+* print consumer_url ...................................................... passed
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.v2+json" ................. passed
+When method post .......................................................... passed
+Then status 204 ........................................................... passed
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert response.topics[0] == "veera_topic" .............................. passed
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/records" . passed
+And param timeout = 3000 .................................................. passed
+And param max_bytes = 300000 .............................................. passed
+And header Accept = "application/vnd.kafka.json.v2+json" .................. passed
+When method get ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22_kafka3.feature:56 - 
+java.net.SocketTimeoutException: Read timed out&#13;
+	at ✽.When method get (karate22_kafka3.feature:56)&#13;
+
+Then status 200 ........................................................... skipped
+* print response .......................................................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/assignments" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22_kafka3.feature:64 - 
+java.net.SocketTimeoutException: Read timed out&#13;
+	at ✽.When method get (karate22_kafka3.feature:64)&#13;
+
+Then status 200 ........................................................... skipped
+* print response .......................................................... skipped
+* assert response.partitions[0].topic == "veera_topic" .................... skipped</failure>
+  </testcase>
+  <testcase classname="featurefiles.karate22_kafka3" name="Deleting assigned subscription" time="4.994219">
+    <failure message="karate22_kafka3.feature:74 - &#10;java.net.SocketTimeoutException: Read timed out">Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "veera_consumer" .......................... passed
+* def consumer_url = response.base_uri .................................... passed
+* print consumer_url ...................................................... passed
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.v2+json" ................. passed
+When method post .......................................................... passed
+Then status 204 ........................................................... passed
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert response.topics[0] == "veera_topic" .............................. passed
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/records" . passed
+And param timeout = 3000 .................................................. passed
+And param max_bytes = 300000 .............................................. passed
+And header Accept = "application/vnd.kafka.json.v2+json" .................. passed
+When method get ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22_kafka3.feature:56 - 
+java.net.SocketTimeoutException: Read timed out&#13;
+	at ✽.When method get (karate22_kafka3.feature:56)&#13;
+
+Then status 200 ........................................................... skipped
+* print response .......................................................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/assignments" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22_kafka3.feature:64 - 
+java.net.SocketTimeoutException: Read timed out&#13;
+	at ✽.When method get (karate22_kafka3.feature:64)&#13;
+
+Then status 200 ........................................................... skipped
+* print response .......................................................... skipped
+* assert response.partitions[0].topic == "veera_topic" .................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method delete ........................................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22_kafka3.feature:74 - 
+java.net.SocketTimeoutException: Read timed out&#13;
+	at ✽.When method delete (karate22_kafka3.feature:74)&#13;
+
+Then status 204 ........................................................... skipped</failure>
+  </testcase>
+  <testcase classname="featurefiles.karate22_kafka3" name="Deleting consumer" time="5.016858">
+    <failure message="karate22_kafka3.feature:81 - &#10;java.net.SocketTimeoutException: Read timed out">Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "veera_consumer" .......................... passed
+* def consumer_url = response.base_uri .................................... passed
+* print consumer_url ...................................................... passed
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.v2+json" ................. passed
+When method post .......................................................... passed
+Then status 204 ........................................................... passed
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert response.topics[0] == "veera_topic" .............................. passed
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/records" . passed
+And param timeout = 3000 .................................................. passed
+And param max_bytes = 300000 .............................................. passed
+And header Accept = "application/vnd.kafka.json.v2+json" .................. passed
+When method get ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22_kafka3.feature:56 - 
+java.net.SocketTimeoutException: Read timed out&#13;
+	at ✽.When method get (karate22_kafka3.feature:56)&#13;
+
+Then status 200 ........................................................... skipped
+* print response .......................................................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/assignments" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22_kafka3.feature:64 - 
+java.net.SocketTimeoutException: Read timed out&#13;
+	at ✽.When method get (karate22_kafka3.feature:64)&#13;
+
+Then status 200 ........................................................... skipped
+* print response .......................................................... skipped
+* assert response.partitions[0].topic == "veera_topic" .................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method delete ........................................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22_kafka3.feature:74 - 
+java.net.SocketTimeoutException: Read timed out&#13;
+	at ✽.When method delete (karate22_kafka3.feature:74)&#13;
+
+Then status 204 ........................................................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer" ........ passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method delete ........................................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22_kafka3.feature:81 - 
+java.net.SocketTimeoutException: Read timed out&#13;
+	at ✽.When method delete (karate22_kafka3.feature:81)&#13;
+
+Then status 204 ........................................................... skipped</failure>
+  </testcase>
+  <testcase classname="featurefiles.karate22_kafka3" name="Deleting consumer - Negative Test Case" time="5.006296">
+    <failure message="karate22_kafka3.feature:87 - &#10;java.net.SocketTimeoutException: Read timed out">Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group" ................................. passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.json.v2+json" ............ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* match response.instance_id == "veera_consumer" .......................... passed
+* def consumer_url = response.base_uri .................................... passed
+* print consumer_url ...................................................... passed
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And request ............................................................... passed
+And header Content-Type = "application/vnd.kafka.v2+json" ................. passed
+When method post .......................................................... passed
+Then status 204 ........................................................... passed
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert response.topics[0] == "veera_topic" .............................. passed
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/records" . passed
+And param timeout = 3000 .................................................. passed
+And param max_bytes = 300000 .............................................. passed
+And header Accept = "application/vnd.kafka.json.v2+json" .................. passed
+When method get ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22_kafka3.feature:56 - 
+java.net.SocketTimeoutException: Read timed out&#13;
+	at ✽.When method get (karate22_kafka3.feature:56)&#13;
+
+Then status 200 ........................................................... skipped
+* print response .......................................................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/assignments" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method get ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22_kafka3.feature:64 - 
+java.net.SocketTimeoutException: Read timed out&#13;
+	at ✽.When method get (karate22_kafka3.feature:64)&#13;
+
+Then status 200 ........................................................... skipped
+* print response .......................................................... skipped
+* assert response.partitions[0].topic == "veera_topic" .................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer/subscription" . passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method delete ........................................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22_kafka3.feature:74 - 
+java.net.SocketTimeoutException: Read timed out&#13;
+	at ✽.When method delete (karate22_kafka3.feature:74)&#13;
+
+Then status 204 ........................................................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer" ........ passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method delete ........................................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22_kafka3.feature:81 - 
+java.net.SocketTimeoutException: Read timed out&#13;
+	at ✽.When method delete (karate22_kafka3.feature:81)&#13;
+
+Then status 204 ........................................................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/consumers/my-consumer-group/instances/veera_consumer" ........ passed
+And header Accept = "application/vnd.kafka.v2+json" ....................... passed
+When method delete ........................................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate22_kafka3.feature:87 - 
+java.net.SocketTimeoutException: Read timed out&#13;
+	at ✽.When method delete (karate22_kafka3.feature:87)&#13;
+
+Then status 404 ........................................................... skipped
+* assert response.message == "Consumer instance not found." ............... skipped</failure>
+  </testcase>
+</testsuite>

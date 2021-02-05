@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>featurefiles.karate02</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">4</div>
+            
+<div class="bg-danger" id="nav-fail">1</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2021-02-05 04:04:02 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item passed">
+<a href="#[1:4]">[1:4] JSON test case 1 </a>
+</div>
+<div class="nav-item passed">
+<a href="#[2:10]">[2:10] JSON test case 2 </a>
+</div>
+<div class="nav-item passed">
+<a href="#[3:22]">[3:22] JSON test case 3 </a>
+</div>
+<div class="nav-item passed">
+<a href="#[4:27]">[4:27] JSON test case 4 </a>
+</div>
+<div class="nav-item failed">
+<a href="#[5:31]">[5:31] JSON test case 5 </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">featurefiles/karate02.feature</span><span class="feature-description">karate test suite2 | Validating JSON content</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:4]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [1:4]</span><span class="scenario-name">JSON test case 1 </span>
+</div>
+<div class="scenario-time passed">ms: 13</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="1">
+<div class="step-ref passed">1</div>
+<div class="step-cell passed">Given def json = { "id" : "101", "tool": { "name":"Karate", "version":"0.9.6"}}</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="preformatted" data-parent="1">16:03:47.963 From karate-config file</div>
+<div class="step-row">
+<div class="step-container" id="2">
+<div class="step-ref passed">2</div>
+<div class="step-cell passed">* print json</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="2">16:03:47.963 [print] {
+  "id": "101",
+  "tool": {
+    "name": "Karate",
+    "version": "0.9.6"
+  }
+}</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref passed">3</div>
+<div class="step-cell passed">* print json.id</div>
+</div>
+<div class="time-cell passed">6</div>
+</div>
+<div class="preformatted" data-parent="3">16:03:47.979 [print] 101</div>
+<div class="step-row">
+<div class="step-container" id="4">
+<div class="step-ref passed">4</div>
+<div class="step-cell passed">* print json.tool.name</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="preformatted" data-parent="4">16:03:47.979 [print] Karate16:03:47.979 after scenario inside config</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2:10]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [2:10]</span><span class="scenario-name">JSON test case 2 </span>
+</div>
+<div class="scenario-time passed">ms: 1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="5">
+<div class="step-ref passed">5</div>
+<div class="step-cell passed">Given def json =</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="5">{
+    "id" : "101",
+    "tool": { "name":"Karate", "version":"0.9.6"}
+ }
+16:03:47.979 From karate-config file</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref passed">6</div>
+<div class="step-cell passed">* print json</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="6">16:03:47.979 [print] {
+  "id": "101",
+  "tool": {
+    "name": "Karate",
+    "version": "0.9.6"
+  }
+}</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref passed">7</div>
+<div class="step-cell passed">* print json.id</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="7">16:03:47.979 [print] 101</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref passed">8</div>
+<div class="step-cell passed">* print json.tool.name</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="8">16:03:47.979 [print] Karate16:03:47.979 after scenario inside config</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[3:22]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [3:22]</span><span class="scenario-name">JSON test case 3 </span>
+</div>
+<div class="scenario-time passed">ms: 7</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">Given def json = { "id" : "101", "tool": { "name":"Karate", "version":"0.9.6"}}</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="9">16:03:47.995 From karate-config file</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref passed">10</div>
+<div class="step-cell passed">* assert json.id == "101"</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="11">
+<div class="step-ref passed">11</div>
+<div class="step-cell passed">* assert json.tool.name == "Karate"</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="11">16:03:47.995 after scenario inside config</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[4:27]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [4:27]</span><span class="scenario-name">JSON test case 4 </span>
+</div>
+<div class="scenario-time passed">ms: 3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="12">
+<div class="step-ref passed">12</div>
+<div class="step-cell passed">Given def json = { "id" : "101", "tool": { "name":"Karate", "version":"0.9.6"}}</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="12">16:03:47.995 From karate-config file</div>
+<div class="step-row">
+<div class="step-container" id="13">
+<div class="step-ref passed">13</div>
+<div class="step-cell passed">* match json.tool == { "name":"Karate", "version":"0.9.6"}</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="preformatted" data-parent="13">16:03:48.010 after scenario inside config</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[5:31]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [5:31]</span><span class="scenario-name">JSON test case 5 </span>
+</div>
+<div class="scenario-time failed">ms: 1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="14">
+<div class="step-ref passed">14</div>
+<div class="step-cell passed">Given def json = { "id" : "101", "tool": { "name":"Karate", "version":"0.9.4"}}</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="14">16:03:48.010 From karate-config file</div>
+<div class="step-row">
+<div class="step-container" id="15">
+<div class="step-ref failed">15</div>
+<div class="step-cell failed">* match json.tool == { "name":"Karate", "version":"0.9.6"}</div>
+</div>
+<div class="time-cell failed">1</div>
+</div>
+<div class="preformatted" data-parent="15">16:03:48.010 assertion failed: path: $.tool.version, actual: '0.9.4', expected: '0.9.6', reason: not equal16:03:48.010 after scenario inside config
+karate02.feature:33 - path: $.tool.version, actual: '0.9.4', expected: '0.9.6', reason: not equal</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

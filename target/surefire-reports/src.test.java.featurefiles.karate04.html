@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.java.featurefiles.karate04</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">1</div>
+            
+<div class="bg-danger" id="nav-fail">0</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2021-02-02 06:04:51 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item passed">
+<a href="#[2:36]">[2:36] SOAP API test case 2 </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/featurefiles/karate04.feature</span><span class="feature-description">karate test suite4 | Validating SOAP API content</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2:36]">
+<div class="heading-container">
+<div class="scenario-tags">
+<a class="badge badge-primary" href="karate-tags.html">soap</a>
+</div>
+<span class="scenario-keyword">Scenario: [2:36]</span><span class="scenario-name">SOAP API test case 2 </span>
+</div>
+<div class="scenario-time passed">ms: 1235</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="1">
+<div class="step-ref passed">1</div>
+<div class="step-cell passed">Given url "http://www.dneonline.com/calculator.asmx"</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="preformatted" data-parent="1">18:04:50.664 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row">
+<div class="step-container" id="2">
+<div class="step-ref passed">2</div>
+<div class="step-cell passed">And header Content-Type = "text/xml; charset=utf-8"</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref passed">3</div>
+<div class="step-cell passed">And request</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="3">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;soap:Body&gt;
+    &lt;Add xmlns="http://tempuri.org/"&gt;
+      &lt;intA&gt;1&lt;/intA&gt;
+       &lt;intB&gt;2&lt;/intB&gt;
+    &lt;/Add&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;</div>
+<div class="step-row">
+<div class="step-container" id="4">
+<div class="step-ref passed">4</div>
+<div class="step-cell passed">When soap action "http://tempuri.org/Add"</div>
+</div>
+<div class="time-cell passed">1164</div>
+</div>
+<div class="preformatted" data-parent="4">18:04:51.086 request:
+1 &gt; POST http://www.dneonline.com/calculator.asmx
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 314
+1 &gt; Content-Type: text/xml; charset=UTF-8
+1 &gt; Host: www.dneonline.com
+1 &gt; SOAPAction: http://tempuri.org/Add
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&#13;
+  &lt;soap:Body&gt;&#13;
+    &lt;Add xmlns="http://tempuri.org/"&gt;&#13;
+      &lt;intA&gt;1&lt;/intA&gt;&#13;
+       &lt;intB&gt;2&lt;/intB&gt;&#13;
+    &lt;/Add&gt;&#13;
+  &lt;/soap:Body&gt;&#13;
+&lt;/soap:Envelope&gt;
+
+18:04:51.852 response time in milliseconds: 763.52
+1 &lt; 200
+1 &lt; Cache-Control: private, max-age=0
+1 &lt; Content-Type: text/xml; charset=utf-8
+1 &lt; Date: Tue, 02 Feb 2021 12:34:51 GMT
+1 &lt; Server: Microsoft-IIS/8.0
+1 &lt; Vary: Accept-Encoding
+1 &lt; X-AspNet-Version: 2.0.50727
+1 &lt; X-Powered-By: ASP.NET
+1 &lt; X-Powered-By-Plesk: PleskWin
+&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;&lt;soap:Body&gt;&lt;AddResponse xmlns="http://tempuri.org/"&gt;&lt;AddResult&gt;3&lt;/AddResult&gt;&lt;/AddResponse&gt;&lt;/soap:Body&gt;&lt;/soap:Envelope&gt;</div>
+<div class="step-row">
+<div class="step-container" id="5">
+<div class="step-ref passed">5</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref passed">6</div>
+<div class="step-cell passed">* print responseHeaders</div>
+</div>
+<div class="time-cell passed">30</div>
+</div>
+<div class="preformatted" data-parent="6">18:04:51.883 [print] {
+  "Cache-Control": [
+    "private, max-age=0"
+  ],
+  "Content-Type": [
+    "text/xml; charset=utf-8"
+  ],
+  "Vary": [
+    "Accept-Encoding"
+  ],
+  "Server": [
+    "Microsoft-IIS/8.0"
+  ],
+  "X-AspNet-Version": [
+    "2.0.50727"
+  ],
+  "X-Powered-By": [
+    "ASP.NET"
+  ],
+  "X-Powered-By-Plesk": [
+    "PleskWin"
+  ],
+  "Date": [
+    "Tue, 02 Feb 2021 12:34:51 GMT"
+  ]
+}</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref passed">7</div>
+<div class="step-cell passed">* print responseHeaders["Server"]</div>
+</div>
+<div class="time-cell passed">8</div>
+</div>
+<div class="preformatted" data-parent="7">18:04:51.883 [print] [
+  "Microsoft-IIS/8.0"
+]</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref passed">8</div>
+<div class="step-cell passed">* print responseHeaders["Server"][0]</div>
+</div>
+<div class="time-cell passed">12</div>
+</div>
+<div class="preformatted" data-parent="8">18:04:51.899 [print] Microsoft-IIS/8.0</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">* print responseHeaders["Server"] == ["Microsoft-IIS/8.0"]</div>
+</div>
+<div class="time-cell passed">6</div>
+</div>
+<div class="preformatted" data-parent="9">18:04:51.899 [print] false</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref passed">10</div>
+<div class="step-cell passed">* print responseHeaders["Server"][0] == "Microsoft-IIS/8.0"</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="preformatted" data-parent="10">18:04:51.914 [print] true</div>
+<div class="step-row">
+<div class="step-container" id="11">
+<div class="step-ref passed">11</div>
+<div class="step-cell passed">* print responseType</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="11">18:04:51.914 [print] xml</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-cell comment">#* match responseType == "xml"</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="12">
+<div class="step-ref passed">12</div>
+<div class="step-cell passed">* print response</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="12">18:04:51.914 [print] &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&#13;
+  &lt;soap:Body&gt;&#13;
+    &lt;AddResponse xmlns="http://tempuri.org/"&gt;&#13;
+      &lt;AddResult&gt;3&lt;/AddResult&gt;&#13;
+    &lt;/AddResponse&gt;&#13;
+  &lt;/soap:Body&gt;&#13;
+&lt;/soap:Envelope&gt;</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-cell comment">#* match response contains "98.6"</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="13">
+<div class="step-ref passed">13</div>
+<div class="step-cell passed">* match response //AddResult == 3</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="14">
+<div class="step-ref passed">14</div>
+<div class="step-cell passed">* print responseTime</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="14">18:04:51.914 [print] 764</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-cell comment">#* assert responseTime &lt;= 2000</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="15">
+<div class="step-ref passed">15</div>
+<div class="step-cell passed">* print responseStatus</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="15">18:04:51.914 [print] 200</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

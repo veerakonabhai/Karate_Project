@@ -1,0 +1,44 @@
+<testsuite failures="1" name="featurefiles/karate19_ActiveMQ2.feature" skipped="0" tests="1" time="6.093839">
+  <testcase classname="featurefiles.karate19_ActiveMQ2" name="Producing &amp; Consuming Message" time="6.093839">
+    <failure message="karate19_ActiveMQ2.feature:65 - &#10;java.net.SocketTimeoutException: Read timed out">* def login = ............................................................. passed
+* def waitForMiliseconds = ................................................ passed
+* def auth = login("admin", "admin") ...................................... passed
+* print auth .............................................................. passed
+* configure ssl = false ................................................... passed
+* configure followRedirects = false ....................................... passed
+Given url "http://192.168.1.62:8161" ...................................... passed
+And header Authorization = auth ........................................... passed
+Given path "/api/message" ................................................. passed
+And param destination = "queue://veera1.input" ............................ passed
+And header Connection = "Keep-Alive" ...................................... passed
+And request "Hi, Karate - Veera" .......................................... passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+* print responseCookies ................................................... passed
+* def cookieJSId = responseCookies.JSESSIONID ............................. passed
+* print cookieJSId ........................................................ passed
+* waitForMiliseconds(1000) ................................................ passed
+Given path "/api/message/veera1.input" .................................... passed
+And param type = "queue" .................................................. passed
+And cookie JSESSIONID = cookieJSId ........................................ passed
+And header Accept-Language = "en-US,en;q=0.9" ............................. passed
+And header Accept-Encoding = "gzip, deflate" .............................. passed
+And header Authorization = auth ........................................... passed
+And header Connection = "Keep-Alive" ...................................... passed
+And header Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" . passed
+And header Cache-Control = "max-age=0" .................................... passed
+And header User-Agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" . passed
+And header Upgrade-Insecure-Requests = 1 .................................. passed
+When method get ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate19_ActiveMQ2.feature:65 - 
+java.net.SocketTimeoutException: Read timed out&#13;
+	at ✽.When method get (karate19_ActiveMQ2.feature:65)&#13;
+
+Then status 200 ........................................................... skipped
+* print responseType ...................................................... skipped
+* print response .......................................................... skipped
+* match response contains "Hi, Karate - Veera" ............................ skipped</failure>
+  </testcase>
+</testsuite>

@@ -1,0 +1,36 @@
+<testsuite failures="0" name="src/test/java/featurefiles/karate12.feature" skipped="0" tests="2" time="1.231494">
+  <testcase classname="src.test.java.featurefiles.karate12" name="DDT test case 2" time="0.904541">
+    <system-out>Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=37" .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* print responseType ...................................................... passed
+* print responseTime ...................................................... passed
+* print response .......................................................... passed
+* match response //string == 98.6 ......................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.featurefiles.karate12" name="DDT test case 2" time="0.326953">
+    <system-out>Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=37" .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* print responseType ...................................................... passed
+* print responseTime ...................................................... passed
+* print response .......................................................... passed
+* match response //string == 98.6 ......................................... passed
+Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=40" .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* print responseType ...................................................... passed
+* print responseTime ...................................................... passed
+* print response .......................................................... passed
+* match response //string == 104 .......................................... passed</system-out>
+  </testcase>
+</testsuite>

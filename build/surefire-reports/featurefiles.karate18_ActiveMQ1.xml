@@ -1,0 +1,21 @@
+<testsuite failures="1" name="featurefiles/karate18_ActiveMQ1.feature" skipped="0" tests="1" time="0.012612">
+  <testcase classname="featurefiles.karate18_ActiveMQ1" name="Getting ActiveMQ Server Status" time="0.012612">
+    <failure message="karate18_ActiveMQ1.feature:28 - path: $.value.agent, actual: null, expected: '1.3.4', reason: actual json-path does not exist">* def login = ............................................................. passed
+* def auth = login("admin", "admin") ...................................... passed
+* print auth .............................................................. passed
+Given url "http://192.168.1.62:8161" ...................................... passed
+And header Authorization = auth ........................................... passed
+Given path "/api/jolokia" ................................................. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print responseType ...................................................... passed
+* assert responseType == "json" ........................................... passed
+* match response.value.agent == "1.3.4" ................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate18_ActiveMQ1.feature:28 - path: $.value.agent, actual: null, expected: '1.3.4', reason: actual json-path does not exist&#13;
+	at ✽.* match response.value.agent == "1.3.4" (karate18_ActiveMQ1.feature:28)&#13;
+
+* match response.value.info.product == "activemq" ......................... skipped</failure>
+  </testcase>
+</testsuite>

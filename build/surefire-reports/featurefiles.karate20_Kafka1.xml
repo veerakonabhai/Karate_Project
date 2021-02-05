@@ -1,0 +1,50 @@
+<testsuite failures="1" name="featurefiles/karate20_Kafka1.feature" skipped="0" tests="2" time="0.022832">
+  <testcase classname="featurefiles.karate20_Kafka1" name="Getting List of Topics &amp; specific topic" time="0.016108">
+    <failure message="karate20_Kafka1.feature:13 - path: $[1], actual: 'pravalika_topic', expected: 'confluent', reason: not a sub-string">Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/topics" ...................................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert responseType == "json" ........................................... passed
+* match response[1] contains "confluent" .................................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate20_Kafka1.feature:13 - path: $[1], actual: 'pravalika_topic', expected: 'confluent', reason: not a sub-string&#13;
+	at ✽.* match response[1] contains "confluent" (karate20_Kafka1.feature:13)&#13;
+
+* def topic = response[1] ................................................. skipped
+* print topic ............................................................. skipped
+Given path "/topics/" + topic ............................................. skipped
+When method get ........................................................... skipped
+Then status 200 ........................................................... skipped
+* print response .......................................................... skipped
+* assert response.name == topic ........................................... skipped</failure>
+  </testcase>
+  <testcase classname="featurefiles.karate20_Kafka1" name="Negative Test Case - non-existing topic" time="0.006724">
+    <system-out>Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/topics" ...................................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* assert responseType == "json" ........................................... passed
+* match response[1] contains "confluent" .................................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate20_Kafka1.feature:13 - path: $[1], actual: 'pravalika_topic', expected: 'confluent', reason: not a sub-string&#13;
+	at ✽.* match response[1] contains "confluent" (karate20_Kafka1.feature:13)&#13;
+
+* def topic = response[1] ................................................. skipped
+* print topic ............................................................. skipped
+Given path "/topics/" + topic ............................................. skipped
+When method get ........................................................... skipped
+Then status 200 ........................................................... skipped
+* print response .......................................................... skipped
+* assert response.name == topic ........................................... skipped
+Given url "http://192.168.1.62:8082" ...................................... passed
+Given path "/topics/rest123" .............................................. passed
+When method get ........................................................... passed
+Then status 404 ........................................................... passed
+* print response .......................................................... passed
+* match response.message == "This server does not host this topic-partition." . passed</system-out>
+  </testcase>
+</testsuite>

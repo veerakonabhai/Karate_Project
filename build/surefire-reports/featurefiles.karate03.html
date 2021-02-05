@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>featurefiles.karate03</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">6</div>
+            
+<div class="bg-danger" id="nav-fail">1</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2021-02-05 04:04:02 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item passed">
+<a href="#[1:4]">[1:4] XML test case 1 </a>
+</div>
+<div class="nav-item passed">
+<a href="#[2:11]">[2:11] XML test case 2 </a>
+</div>
+<div class="nav-item passed">
+<a href="#[3:27]">[3:27] XML test case 3 </a>
+</div>
+<div class="nav-item passed">
+<a href="#[4:32]">[4:32] XML test case 4 </a>
+</div>
+<div class="nav-item passed">
+<a href="#[5:36]">[5:36] XML test case 5 </a>
+</div>
+<div class="nav-item passed">
+<a href="#[6:40]">[6:40] XML test case 6 </a>
+</div>
+<div class="nav-item failed">
+<a href="#[7:57]">[7:57] XML test case 7 </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">featurefiles/karate03.feature</span><span class="feature-description">karate test suite3 | Validating XML content</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:4]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [1:4]</span><span class="scenario-name">XML test case 1 </span>
+</div>
+<div class="scenario-time passed">ms: 17</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="1">
+<div class="step-ref passed">1</div>
+<div class="step-cell passed">Given def xml = &lt;info&gt;&lt;id&gt;101&lt;/id&gt;&lt;tool&gt;&lt;name&gt;Karate&lt;/name&gt;&lt;version&gt;0.9.6&lt;/version&gt;&lt;/tool&gt;&lt;/info&gt;</div>
+</div>
+<div class="time-cell passed">6</div>
+</div>
+<div class="preformatted" data-parent="1">16:03:48.041 From karate-config file</div>
+<div class="step-row">
+<div class="step-container" id="2">
+<div class="step-ref passed">2</div>
+<div class="step-cell passed">* print xml</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="2">16:03:48.041 [print] &lt;info&gt;&#13;
+  &lt;id&gt;101&lt;/id&gt;&#13;
+  &lt;tool&gt;&#13;
+    &lt;name&gt;Karate&lt;/name&gt;&#13;
+    &lt;version&gt;0.9.6&lt;/version&gt;&#13;
+  &lt;/tool&gt;&#13;
+&lt;/info&gt;</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref passed">3</div>
+<div class="step-cell passed">* print xml/info/id/</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="preformatted" data-parent="3">16:03:48.057 [print]</div>
+<div class="step-row">
+<div class="step-container" id="4">
+<div class="step-ref passed">4</div>
+<div class="step-cell passed">* print xml.info.id</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="4">16:03:48.057 [print] 101</div>
+<div class="step-row">
+<div class="step-container" id="5">
+<div class="step-ref passed">5</div>
+<div class="step-cell passed">* print xml.info.tool.name</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="preformatted" data-parent="5">16:03:48.057 [print] Karate16:03:48.057 after scenario inside config</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2:11]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [2:11]</span><span class="scenario-name">XML test case 2 </span>
+</div>
+<div class="scenario-time passed">ms: 16</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref passed">6</div>
+<div class="step-cell passed">Given def xml =</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="6">&lt;info&gt;
+&lt;id&gt;101&lt;/id&gt;
+&lt;tool&gt;
+  &lt;name&gt;Karate&lt;/name&gt;
+  &lt;version&gt;0.9.6&lt;/version&gt;
+&lt;/tool&gt;
+&lt;/info&gt;
+16:03:48.057 From karate-config file</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref passed">7</div>
+<div class="step-cell passed">* print xml</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="7">16:03:48.057 [print] &lt;info&gt;&#13;
+  &lt;id&gt;101&lt;/id&gt;&#13;
+  &lt;tool&gt;&#13;
+    &lt;name&gt;Karate&lt;/name&gt;&#13;
+    &lt;version&gt;0.9.6&lt;/version&gt;&#13;
+  &lt;/tool&gt;&#13;
+&lt;/info&gt;</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref passed">8</div>
+<div class="step-cell passed">* print xml/info/id</div>
+</div>
+<div class="time-cell passed">13</div>
+</div>
+<div class="preformatted" data-parent="8">16:03:48.072 [print]</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">* print xml.info.id</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="9">16:03:48.072 [print] 101</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref passed">10</div>
+<div class="step-cell passed">* print xml.info.tool.name</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="10">16:03:48.072 [print] Karate16:03:48.072 after scenario inside config</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[3:27]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [3:27]</span><span class="scenario-name">XML test case 3 </span>
+</div>
+<div class="scenario-time passed">ms: 40</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="11">
+<div class="step-ref passed">11</div>
+<div class="step-cell passed">Given def xml = &lt;info&gt;&lt;id&gt;101&lt;/id&gt;&lt;tool&gt;&lt;name&gt;Karate&lt;/name&gt;&lt;version&gt;0.9.6&lt;/version&gt;&lt;/tool&gt;&lt;/info&gt;</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="11">16:03:48.088 From karate-config file</div>
+<div class="step-row">
+<div class="step-container" id="12">
+<div class="step-ref passed">12</div>
+<div class="step-cell passed">* match xml/info/id == 101</div>
+</div>
+<div class="time-cell passed">36</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="13">
+<div class="step-ref passed">13</div>
+<div class="step-cell passed">* match xml.info.tool.name == "Karate"</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="preformatted" data-parent="13">16:03:48.135 after scenario inside config</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[4:32]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [4:32]</span><span class="scenario-name">XML test case 4 </span>
+</div>
+<div class="scenario-time passed">ms: 3</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="14">
+<div class="step-ref passed">14</div>
+<div class="step-cell passed">Given def xml = &lt;info&gt;&lt;id&gt;101&lt;/id&gt;&lt;tool&gt;&lt;name&gt;Karate&lt;/name&gt;&lt;version&gt;0.9.6&lt;/version&gt;&lt;/tool&gt;&lt;/info&gt;</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="14">16:03:48.135 From karate-config file</div>
+<div class="step-row">
+<div class="step-container" id="15">
+<div class="step-ref passed">15</div>
+<div class="step-cell passed">* match xml contains "Karate"</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="15">16:03:48.135 after scenario inside config</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[5:36]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [5:36]</span><span class="scenario-name">XML test case 5 </span>
+</div>
+<div class="scenario-time passed">ms: 6</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="16">
+<div class="step-ref passed">16</div>
+<div class="step-cell passed">Given def xml = &lt;info&gt;&lt;id&gt;101&lt;/id&gt;&lt;tool&gt;&lt;name&gt;Karate&lt;/name&gt;&lt;version&gt;0.9.6&lt;/version&gt;&lt;/tool&gt;&lt;/info&gt;</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="16">16:03:48.151 From karate-config file</div>
+<div class="step-row">
+<div class="step-container" id="17">
+<div class="step-ref passed">17</div>
+<div class="step-cell passed">* match xml contains "&lt;name&gt;Karate&lt;/name&gt;"</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="preformatted" data-parent="17">16:03:48.151 after scenario inside config</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[6:40]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [6:40]</span><span class="scenario-name">XML test case 6 </span>
+</div>
+<div class="scenario-time passed">ms: 5</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="18">
+<div class="step-ref passed">18</div>
+<div class="step-cell passed">Given def xml =</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="18">&lt;info&gt;
+&lt;tool&gt;
+  &lt;name&gt;Karate&lt;/name&gt;
+  &lt;version&gt;0.9.6&lt;/version&gt;
+  &lt;/tool&gt;
+&lt;tool&gt;
+  &lt;name&gt;IntelliJ&lt;/name&gt;
+  &lt;version&gt;2020.2&lt;/version&gt;
+&lt;/tool&gt;
+&lt;/info&gt;
+16:03:48.166 From karate-config file</div>
+<div class="step-row">
+<div class="step-container" id="19">
+<div class="step-ref passed">19</div>
+<div class="step-cell passed">* match xml/info/tool[1]/name contains "Karate"</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="20">
+<div class="step-ref passed">20</div>
+<div class="step-cell passed">* match xml/info/tool[2]/name contains "IntelliJ"</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="20">16:03:48.166 after scenario inside config</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[7:57]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [7:57]</span><span class="scenario-name">XML test case 7 </span>
+</div>
+<div class="scenario-time failed">ms: 18</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="21">
+<div class="step-ref passed">21</div>
+<div class="step-cell passed">Given def xml =</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="preformatted" data-parent="21">&lt;info&gt;
+&lt;tool&gt;
+  &lt;name&gt;Karate&lt;/name&gt;
+  &lt;version&gt;0.9.6&lt;/version&gt;
+  &lt;/tool&gt;
+&lt;tool&gt;
+  &lt;name&gt;IntelliJ&lt;/name&gt;
+  &lt;version&gt;2020.2&lt;/version&gt;
+&lt;/tool&gt;
+&lt;/info&gt;
+16:03:48.182 From karate-config file</div>
+<div class="step-row">
+<div class="step-container" id="22">
+<div class="step-ref failed">22</div>
+<div class="step-cell failed">* assert eval(xml/info/tool[1]/name == "Karate") &amp;&amp; eval(xml/info/tool[2]/name == "IntelliJ")</div>
+</div>
+<div class="time-cell failed">14</div>
+</div>
+<div class="preformatted" data-parent="22">16:03:48.207 after scenario inside config
+karate03.feature:71 - evaluation (js) failed: eval(xml/info/tool[1]/name == "Karate") &amp;&amp; eval(xml/info/tool[2]/name == "IntelliJ"), javax.script.ScriptException: ReferenceError: "info" is not defined in &lt;eval&gt; at line number 1
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>
